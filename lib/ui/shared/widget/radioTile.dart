@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+
 class RadioTile extends StatelessWidget {
-  const RadioTile({required this.value, required this.groupValue, required this.onChange, required this.text});
+  const RadioTile({super.key, required this.value, required this.groupValue, required this.onChange, required this.text});
   final String value;
   final String? groupValue;
   final String text;
@@ -17,7 +18,7 @@ class RadioTile extends StatelessWidget {
             borderRadius: BorderRadius.circular(10)),
         child: RadioListTile<String>(
           title: Text(text,
-              style: TextStyle(color: Color(0xFFBDBDBD))),
+              style: const TextStyle(color: Color(0xFFBDBDBD))),
           value: value,
           groupValue: groupValue,
           onChanged: onChange,

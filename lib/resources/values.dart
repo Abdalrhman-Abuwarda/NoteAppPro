@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
  return SizedBox(height: height,);
 }
 
- addHorizantelSpace(double width){
+ addHorizantalSpace(double width){
  return SizedBox(width: width,);
 }
 

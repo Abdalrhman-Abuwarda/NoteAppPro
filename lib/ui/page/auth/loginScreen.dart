@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:note_app_pro/core/provider/noteProvider.dart';
 import 'package:provider/provider.dart';
 import '../../../core/provider/authProvider.dart';
 import '../../../resources/assets.dart';
 import '../../../resources/values.dart';
 import '../../../routing/navigations.dart';
 import '../../../routing/router.dart';
-import '../../../utils/helper.dart';
 import '../../../utils/validate.dart';
 import '../../shared/widget/footerPage.dart';
 import '../../shared/widget/headerPage.dart';
@@ -90,10 +87,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 addVerticalSpace(5.h),
                 Row(
                   children: [
-                    addHorizantelSpace(200),
+                    addHorizantalSpace(200),
                     TextButton(
                       onPressed: () {
-                        ServiceNavigations.serviceNavi.pushNamedWidget(RouteGenerator.forgetPassword);
+                        ServiceNavigation.serviceNavi.pushNamedWidget(RouteGenerator.forgetPassword);
                       },
                       child: const Text(
                         "Forget Password?",
@@ -123,7 +120,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 FooterPage(text: "Have an account? ",
                     textButtom: "Sign Up",
                     onPressed: () {
-                      ServiceNavigations.serviceNavi.pushNamedWidget(RouteGenerator.signupPage);
+                      ServiceNavigation.serviceNavi.pushNamedWidget(RouteGenerator.signupPage);
                     })
               ],
             ),

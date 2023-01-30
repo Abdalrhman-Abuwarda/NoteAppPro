@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                 color: Color(0xFF21AA93),
               ),
               onPressed: (){
-                ServiceNavigations.serviceNavi
+                ServiceNavigation.serviceNavi
                     .pushNamedWidget(RouteGenerator.searchPage);
               },
             ),
@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
             child: Consumer<AuthProvider>(builder: (context, auth, child) {
               return IconButton(
                   onPressed: () {
-                    ServiceNavigations.serviceNavi
+                    ServiceNavigation.serviceNavi
                         .pushNamedWidget(RouteGenerator.settingPage);
                     // note.ClearTask();
                   },
@@ -127,7 +127,7 @@ class _HomePageState extends State<HomePage> {
           builder: (context, value, child) =>
               GroupedListView(
                 elements: value.tasks,
-                groupBy: (elements) => elements.created_at.substring(0, 10),
+                groupBy: (elements) => elements.createdAt.substring(0, 10),
                 groupSeparatorBuilder: (value) => Container( margin: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),height: 30.h,child: Text(value)),
                 groupHeaderBuilder: null,
                 itemBuilder: (context, element) => ToDoTile(

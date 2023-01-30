@@ -34,7 +34,7 @@ class AuthProvider extends ChangeNotifier with ApiHelper {
         notifyListeners();
         Helpers.showSnackBar(
             message: dataResponse["message"], status: dataResponse["status"]);
-        ServiceNavigations.serviceNavi
+        ServiceNavigation.serviceNavi
             .pushNamedReplacement(RouteGenerator.homePage);
       }
     } catch (error) {
@@ -67,7 +67,7 @@ class AuthProvider extends ChangeNotifier with ApiHelper {
         notifyListeners();
         Helpers.showSnackBar(
             message: responseModel.message, status: responseModel.status);
-        ServiceNavigations.serviceNavi
+        ServiceNavigation.serviceNavi
             .pushNamedWidget(RouteGenerator.loginPage);
       }
     } catch (error) {
@@ -86,12 +86,12 @@ class AuthProvider extends ChangeNotifier with ApiHelper {
       if (responseModel.status) {
         SharedPrefController().logout();
         Provider.of<NoteProvider>(
-                ServiceNavigations.serviceNavi.navKey.currentContext!,
+                ServiceNavigation.serviceNavi.navKey.currentContext!,
                 listen: false)
             .clearTask();
         Helpers.showSnackBar(
             message: responseModel.message, status: responseModel.status);
-        ServiceNavigations.serviceNavi
+        ServiceNavigation.serviceNavi
             .pushNamedAndRemoveUtils(RouteGenerator.loginPage);
       }
     } catch (error) {
@@ -105,12 +105,12 @@ class AuthProvider extends ChangeNotifier with ApiHelper {
 
         SharedPrefController().logout();
         Provider.of<NoteProvider>(
-            ServiceNavigations.serviceNavi.navKey.currentContext!,
+            ServiceNavigation.serviceNavi.navKey.currentContext!,
             listen: false)
             .clearTask();
         Helpers.showSnackBar(
             message: "Logout Successful", status: true);
-        ServiceNavigations.serviceNavi
+        ServiceNavigation.serviceNavi
             .pushNamedAndRemoveUtils(RouteGenerator.loginPage);
   }
 
@@ -135,7 +135,7 @@ class AuthProvider extends ChangeNotifier with ApiHelper {
         Helpers.showSnackBar(
             message: dataResponse["code"].toString(),
             status: responseModel.status);
-        ServiceNavigations.serviceNavi
+        ServiceNavigation.serviceNavi
             .pushNamedWidget(RouteGenerator.resetPassword);
       }
 
@@ -161,7 +161,7 @@ class AuthProvider extends ChangeNotifier with ApiHelper {
         notifyListeners();
         Helpers.showSnackBar(
             message: responseModel.message, status: responseModel.status);
-        ServiceNavigations.serviceNavi
+        ServiceNavigation.serviceNavi
             .pushNamedWidget(RouteGenerator.loginPage);
       }
     } catch (error) {

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:note_app_pro/routing/router.dart';
 import 'package:note_app_pro/ui/page/home/homePage.dart';

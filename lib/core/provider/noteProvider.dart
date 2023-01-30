@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:note_app_pro/core/models/apiResponce.dart';
@@ -15,9 +14,9 @@ class NoteProvider extends ChangeNotifier with ApiHelper{
   List<Task> tasks = [];
   List<Task> searchTasks = [];
   // List<Task>? reverseTasks = [];
-  final contextKey = ServiceNavigations.serviceNavi.navKey.currentContext!;
+  final contextKey = ServiceNavigation.serviceNavi.navKey.currentContext!;
   var provider = Provider.of<AuthProvider>(
-      ServiceNavigations.serviceNavi.navKey.currentContext!,
+      ServiceNavigation.serviceNavi.navKey.currentContext!,
       listen: false);
 
   bool isLoadingButton = false;
@@ -40,13 +39,13 @@ class NoteProvider extends ChangeNotifier with ApiHelper{
         Task task = Task.fromJson(dataResponse["data"]);
         tasks.add(task);
         Helpers.showSnackBar(message: dataResponse["message"], status: dataResponse["status"]);
-        ServiceNavigations.serviceNavi.popFunction();
+        ServiceNavigation.serviceNavi.popFunction();
         debugPrint(task.title);
         notifyListeners();
       } else {
         showDialog(
             context: contextKey,
-            builder: (Context) => alertDialog(
+            builder: (context) => alertDialog(
                   title: 'Warning',
                   content: "Your account login in anther divice",
                   onPressed: () {
@@ -67,7 +66,7 @@ class NoteProvider extends ChangeNotifier with ApiHelper{
     try {
       debugPrint("This is before dataResponse in fetchNote in provider ");
       var dataResponse = await NoteApiRepository().fetchRepository();
-      debugPrint("This is dataResponse in fetchNote in provider \n ${dataResponse}");
+      debugPrint("This is dataResponse in fetchNote in provider \n $dataResponse");
       if(dataResponse["data"].isNotEmpty) {
         List<dynamic> dataList = dataResponse["data"];
         tasks = dataList.map((value) => Task.fromJson(value)).toList();
@@ -105,7 +104,7 @@ class NoteProvider extends ChangeNotifier with ApiHelper{
       if (responseModel.status) {
         tasks.removeWhere((item) => item.id == id);
         notifyListeners();
-        ServiceNavigations.serviceNavi.popFunction();
+        ServiceNavigation.serviceNavi.popFunction();
         Helpers.showSnackBar(message: responseModel.message, status: responseModel.status);
         // Navigator.pop(contextKey);
         notifyListeners();
@@ -145,7 +144,7 @@ class NoteProvider extends ChangeNotifier with ApiHelper{
         tasks[index].title = titel;
         notifyListeners();
         Helpers.showSnackBar(message: dataResponse["message"], status: dataResponse["status"]);
-        ServiceNavigations.serviceNavi.popFunction();
+        ServiceNavigation.serviceNavi.popFunction();
       }
     } catch (error) {
       handleError(error);

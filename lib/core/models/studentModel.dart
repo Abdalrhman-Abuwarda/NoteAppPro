@@ -38,15 +38,15 @@ class Student {
   // Student.obj(this.fullName, this.email, this.gender, this.password);
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['full_name'] = this.fullName;
-    data['email'] = this.email;
-    data['gender'] = this.gender;
-    data['fcm_token'] = this.fcmToken;
-    data['token'] = this.token;
-    data['refresh_token'] = this.refreshToken;
-    data['is_active'] = this.isActive;
+    final Map<String, dynamic> data =  <String, dynamic>{};
+    data['id'] = id;
+    data['full_name'] = fullName;
+    data['email'] = email;
+    data['gender'] = gender;
+    data['fcm_token'] = fcmToken;
+    data['token'] = token;
+    data['refresh_token'] = refreshToken;
+    data['is_active'] = isActive;
     return data;
   }
 }

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
 
 import '../../../utils/helper.dart';
-import '../../models/apiResponce.dart';
 import 'handelException.dart';
 
 mixin ApiHelper{

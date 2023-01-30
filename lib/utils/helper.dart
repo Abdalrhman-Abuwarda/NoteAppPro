@@ -22,7 +22,7 @@ class Helpers {
 
 class alertDialog extends StatelessWidget {
   alertDialog(
-      {required this.title, required this.content, required this.onPressed});
+      {super.key, required this.title, required this.content, required this.onPressed});
 
   final String title;
   final String content;

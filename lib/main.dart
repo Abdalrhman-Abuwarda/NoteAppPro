@@ -2,14 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:note_app_pro/resources/theme.dart';
 import 'package:note_app_pro/routing/navigations.dart';
-import 'package:note_app_pro/routing/router.dart';
 import 'package:note_app_pro/routing/routes.dart';
-import 'package:note_app_pro/ui/page/auth/loginScreen.dart';
 import 'package:note_app_pro/ui/page/home/homePage.dart';
 import 'package:note_app_pro/ui/page/splashPage.dart';
 import 'package:note_app_pro/utils/helper.dart';
 import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'core/data/local/sharedController.dart';
 import 'core/provider/authProvider.dart';
 import 'core/provider/noteProvider.dart';
@@ -19,11 +16,13 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
   await SharedPrefController().initSharedPreferences();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
   State<MyApp> createState() => _MyAppState();
 }
@@ -44,9 +43,9 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => AuthProvider(), child: MyApp()),
-        ChangeNotifierProvider(create: (_) => NoteProvider(), child: MyApp()),
-        ChangeNotifierProvider(create: (_) => ThemeProvider(), child: MyApp()),
+        ChangeNotifierProvider(create: (_) => AuthProvider(), child: const MyApp()),
+        ChangeNotifierProvider(create: (_) => NoteProvider(), child: const MyApp()),
+        ChangeNotifierProvider(create: (_) => ThemeProvider(), child: const MyApp()),
       ],
       child: ScreenUtilInit(
           designSize: const Size(414, 896),
@@ -54,7 +53,7 @@ class _MyAppState extends State<MyApp> {
                 scaffoldMessengerKey: Helpers.scaffoldKey,
                 theme: customDarkTheme(),
                 debugShowCheckedModeBanner: false,
-                navigatorKey: ServiceNavigations.serviceNavi.navKey,
+                navigatorKey: ServiceNavigation.serviceNavi.navKey,
                 home: const SplashPage(),
                 // initialRoute: RouteGenerator.splashPage,
                 onGenerateRoute: RoutsGenerate.generateRoute,

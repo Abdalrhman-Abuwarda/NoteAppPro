@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:note_app_pro/resources/values.dart';
-// import 'package:mobile_shop_app/resources/styles.dart';
-// import 'package:mobile_shop_app/resources/values.dart';
-
-import 'colors.dart';
 
 ThemeData get defaultTheme => ThemeData(
 
@@ -103,7 +98,7 @@ ThemeData get darkTheme => ThemeData(
       color: Colors.green,
       size: 20,
     ),
-    floatingActionButtonTheme: FloatingActionButtonThemeData(
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: Color(0xFF252525)
     ),
     appBarTheme: AppBarTheme(

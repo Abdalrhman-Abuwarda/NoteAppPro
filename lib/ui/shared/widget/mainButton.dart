@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 
 class MainButton extends StatelessWidget {
   const MainButton(
-      {required this.label,
+      {super.key, required this.label,
       this.textColor = Colors.black,
       required this.function,
         this.isLoading = false,
@@ -40,7 +40,7 @@ class MainButton extends StatelessWidget {
             elevation: 0,
             // shape: RoundedRectangleBorder(borderRadius: borderRadius),
           ),
-          child: isLoading ? CircularProgressIndicator() :
+          child: isLoading ? const CircularProgressIndicator() :
           Text(
             label,
             style: TextStyle(

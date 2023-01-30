@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class GragientBox extends StatelessWidget {
-  GragientBox({required this.color1, required this.color2, required this.onTap});
+  GragientBox({super.key, required this.color1, required this.color2, required this.onTap});
   final Color color1;
   final Color color2;
   void Function()? onTap;

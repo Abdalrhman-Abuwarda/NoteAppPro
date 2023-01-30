@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 class MainTextField extends StatelessWidget {
 
-  const MainTextField({
+  const MainTextField({super.key,
     required this.hintText,
     required this.controller,
     required this.icon,

@@ -1,12 +1,12 @@
-const String Image_Paht = "assets/image";
+const String imagePaht = "assets/image";
 
 class ImageAssets {
-  static const String splashLogo = "$Image_Paht/splash.png";
-  static const String mainImage = "$Image_Paht/mainImage.png";
-  static const String searchImage = "$Image_Paht/cuate.png";
+  static const String splashLogo = "$imagePaht/splash.png";
+  static const String mainImage = "$imagePaht/mainImage.png";
+  static const String searchImage = "$imagePaht/cuate.png";
 }
 
-const String Icon_Path='assets/icons';
+const String iconPath='assets/icons';
 
 class IconAssets{
   // static const String google='$Icon_Path/google.svg';
@@ -56,9 +56,9 @@ class IconAssets{
 
 }
 
-const String Svg_Path= 'assets/svg';
+const String svgPath= 'assets/svg';
 class SvgAssets{
-  static const String splash_svg='${Svg_Path}/splash.svg';
+  static const String splashSvg='$svgPath/splash.svg';
   // static const String onboarding_svg_1 ='$Svg_Path/onboarding/onboarding_1.svg';
   // static const String onboarding_svg_2 ='$Svg_Path/onboarding/onboarding_2.svg';
   // static const String onboarding_svg_3 ='$Svg_Path/onboarding/onboarding_3.svg';

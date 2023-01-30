@@ -1,4 +1,3 @@
-import 'package:http/http.dart' as http;
 class EndPoint{
   static String baseUri = 'http://demo-api.mr-dev.tech/api/';
   // static String baseUri2 = 'http://demo-api.mr-dev.tech/api/';

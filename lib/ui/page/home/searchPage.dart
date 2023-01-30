@@ -2,18 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:note_app_pro/core/provider/noteProvider.dart';
 import 'package:note_app_pro/resources/values.dart';
-import 'package:pinput/pinput.dart';
 import 'package:provider/provider.dart';
 
 import '../../../resources/assets.dart';
 import '../../../utils/helper.dart';
-import '../../shared/widget/mainTextField.dart';
 import '../../shared/widget/searchTextFormField.dart';
 import '../../shared/widget/toDoTile.dart';
 import 'addNote/BodeButtomSheet.dart';
 
 class SearchPage extends StatefulWidget {
-   SearchPage({Key? key}) : super(key: key);
+   const SearchPage({Key? key}) : super(key: key);
 
   @override
   State<SearchPage> createState() => _SearchPageState();
@@ -33,7 +31,7 @@ class _SearchPageState extends State<SearchPage> {
           toolbarHeight: 120.h,
           leading: Row(
             children: [
-              Spacer(),
+              const Spacer(),
               CircleAvatar(
                 radius: 20.r,
                 backgroundColor: const Color(0xFF3B3B3B),

@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import 'gradientText.dart';
 
 class HeaderPage extends StatelessWidget {
-  const HeaderPage({
+  const HeaderPage({super.key,
     required this.text, required this.gradientText
   }) ;
 

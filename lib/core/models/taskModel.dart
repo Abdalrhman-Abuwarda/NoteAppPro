@@ -1,29 +1,29 @@
 class Task{
   // Task({required this.title, required this.id, required this.student_id, required this.created_at, required this.updated_at, required this.is_done});
   late String title;
-  late String student_id;
-  late String updated_at;
-  late String created_at;
+  late String studentId;
+  late String updatedAt;
+  late String createdAt;
   late int id;
-  late bool is_done;
+  late bool isDone;
 
   Task.fromJson(Map<String, dynamic> json){
     title = json["title"];
-    student_id = json["student_id"].toString();
-    updated_at = json["updated_at"];
-    created_at = json["created_at"];
+    studentId = json["student_id"].toString();
+    updatedAt = json["updated_at"];
+    createdAt = json["created_at"];
     id = json["id"];
-    is_done = json["is_done"];
+    isDone = json["is_done"];
   }
 
   Map<String, dynamic> toJson(){
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data["title"] = this.title;
-    data["student_id"] = this.student_id;
-    data["updated_at"] = this.updated_at;
-    data["created_at"] = this.created_at;
-    data["id"] = this.id;
-    data["is_done"] = this.is_done;
+    final Map<String, dynamic> data =  <String, dynamic>{};
+    data["title"] = title;
+    data["student_id"] = studentId;
+    data["updated_at"] = updatedAt;
+    data["created_at"] = createdAt;
+    data["id"] = id;
+    data["is_done"] = isDone;
     return data;
   }
   // static List<Task> tasks = [

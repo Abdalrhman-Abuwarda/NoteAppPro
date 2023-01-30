@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:note_app_pro/resources/values.dart';
-import 'package:provider/provider.dart';
-import '../../../../core/provider/noteProvider.dart';
 import '../../../shared/widget/addNoteTextField.dart';
 import '../../../shared/widget/mainButton.dart';
 
 class BottomSheetPage extends StatelessWidget {
-  BottomSheetPage({required this.noteController, required this.text,required this.hintText, required this.buttonText, required this.onPressed, this.isLoading = false});
+  const BottomSheetPage({super.key, required this.noteController, required this.text,required this.hintText, required this.buttonText, required this.onPressed, this.isLoading = false});
 
   final TextEditingController noteController;
   final String text;

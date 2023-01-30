@@ -1,8 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
@@ -14,9 +12,9 @@ import 'handelException.dart';
 
 class BaseClient {
   BaseClient._();
-  final contextKey = ServiceNavigations.serviceNavi.navKey.currentContext!;
+  final contextKey = ServiceNavigation.serviceNavi.navKey.currentContext!;
   var provider = Provider.of<AuthProvider>(
-      ServiceNavigations.serviceNavi.navKey.currentContext!,
+      ServiceNavigation.serviceNavi.navKey.currentContext!,
       listen: false);
 
   int timeout = 30;

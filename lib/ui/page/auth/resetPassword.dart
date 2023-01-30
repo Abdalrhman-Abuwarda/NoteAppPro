@@ -98,7 +98,7 @@ class ResetPassword extends StatelessWidget {
                 FooterPage(text: "Change your email? ",
                     textButtom: "Forget Password",
                     onPressed: () {
-                      ServiceNavigations.serviceNavi.pushNamedWidget(RouteGenerator.forgetPassword);
+                      ServiceNavigation.serviceNavi.pushNamedWidget(RouteGenerator.forgetPassword);
                     })
               ],
             ),

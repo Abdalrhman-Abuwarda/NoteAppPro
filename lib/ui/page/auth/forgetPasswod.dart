@@ -86,7 +86,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                 FooterPage(text: "Have an account? ",
                     textButtom: "Login",
                     onPressed: () {
-                      ServiceNavigations.serviceNavi.pushNamedWidget(RouteGenerator.loginPage);
+                      ServiceNavigation.serviceNavi.pushNamedWidget(RouteGenerator.loginPage);
                     })
               ],
             ),

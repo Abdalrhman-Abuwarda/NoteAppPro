@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:note_app_pro/resources/values.dart';
 import 'package:provider/provider.dart';
-import '../../../core/models/studentModel.dart';
 import '../../../core/provider/authProvider.dart';
 import '../../../routing/navigations.dart';
 import '../../../routing/router.dart';
-import '../../../utils/helper.dart';
 import '../../../utils/validate.dart';
 import '../../shared/widget/footerPage.dart';
 import '../../shared/widget/headerPage.dart';
@@ -158,7 +156,7 @@ class _SignUpState extends State<SignUp> {
                 const Spacer(),
                 FooterPage(
                   text: "Haven an account?",
-                  onPressed: () {  ServiceNavigations.serviceNavi.pushNamedWidget(RouteGenerator.loginPage);},
+                  onPressed: () {  ServiceNavigation.serviceNavi.pushNamedWidget(RouteGenerator.loginPage);},
                   textButtom: "Login",
                 )
               ],

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import '../../core/data/local/sharedController.dart';
 import '../../resources/assets.dart';
 import '../../resources/values.dart';
@@ -22,10 +21,10 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
     Future.delayed(const Duration(seconds: 3), (){
       if(SharedPrefController().isLoggedIn()){
-        ServiceNavigations.serviceNavi.pushNamedReplacement(RouteGenerator.homePage);
+        ServiceNavigation.serviceNavi.pushNamedReplacement(RouteGenerator.homePage);
       }
       else{
-        ServiceNavigations.serviceNavi.pushNamedReplacement(RouteGenerator.loginPage) ;
+        ServiceNavigation.serviceNavi.pushNamedReplacement(RouteGenerator.loginPage) ;
         SharedPrefController().saveColor1(color: "0xFF0074E1");
         SharedPrefController().saveColor2(color: "0xFF6BF5DE");
       }

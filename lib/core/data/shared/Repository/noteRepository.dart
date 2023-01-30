@@ -1,15 +1,10 @@
-import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:note_app_pro/core/data/shared/apiEndPoint.dart';
 import 'dart:io';
-import 'package:http/http.dart' as http;
 import 'package:note_app_pro/core/data/shared/baseClient.dart';
 import '../../local/sharedController.dart';
 import '../apiHelper.dart';
-import '../../../models/apiResponce.dart';
-import '../baseClient.dart';
-import '../handelException.dart';
 
 class NoteApiRepository extends EndPoint with ApiHelper {
 

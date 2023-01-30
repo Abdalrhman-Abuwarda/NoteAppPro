@@ -25,7 +25,7 @@ class _SettingPageState extends State<SettingPage> {
             actions: [
             IconButton(
              onPressed: () {
-               ServiceNavigations.serviceNavi.popFunction();
+               ServiceNavigation.serviceNavi.popFunction();
             },
                  icon: const Icon(
                     Icons.arrow_forward_ios,
@@ -105,7 +105,7 @@ class _SettingPageState extends State<SettingPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children:  [
                   GragientBox(color1: const Color(0xFF0074E1), color2: const Color(0xFF6BF5DE), onTap: (){ theme.changeColor("0xFF0074E1", "0xFF6BF5DE");},),
-                  GragientBox(color1: const Color(0xFFcc2b5e1), color2: const Color(0xFF753a88), onTap: (){ theme.changeColor("0xFFcc2b5e1", "0xFF753a88");},),
+                  GragientBox(color1: const Color(0xffcc2b5e1), color2: const Color(0xFF753a88), onTap: (){ theme.changeColor("0xFFcc2b5e1", "0xFF753a88");},),
                   GragientBox(color1: const Color(0xFF000428), color2: const Color(0xFF004e92), onTap: (){ theme.changeColor("0xFF000428", "0xFF004e92");}),
                   GragientBox(color1: const Color(0xFFdd5e89), color2: const Color(0xFFf7bb97), onTap: (){ theme.changeColor("0xFFdd5e89", "0xFFf7bb97");},),
                 ]

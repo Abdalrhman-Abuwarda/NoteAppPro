@@ -1,15 +1,10 @@
-import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
-import '../../../../utils/helper.dart';
-import '../../../models/studentModel.dart';
 import '../../local/sharedController.dart';
 import '../apiHelper.dart';
-import '../../../models/apiResponce.dart';
 import '../apiEndPoint.dart';
 import '../baseClient.dart';
-import '../handelException.dart';
 
 class AuthRepository extends EndPoint with ApiHelper {
 
